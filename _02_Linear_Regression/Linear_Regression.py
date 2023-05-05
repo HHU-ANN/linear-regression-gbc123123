@@ -18,9 +18,9 @@ def lasso(data):
     x,y = read_data()
     alpha = 1e-10
     step = 1e-9
-    item = 15000
+    item = 20000
     m,n = x.shape
-    w = np.random.random(n)
+    w = np.zeros(n)
     for i in range(item):
         y_hat = np.dot(x,w)
         dw = np.dot(x.T,(y_hat-y))/m+alpha*np.sign(w)
