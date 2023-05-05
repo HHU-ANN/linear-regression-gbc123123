@@ -18,7 +18,7 @@ def lasso(data):
     x,y = read_data()
     alpha = 1e-10
     step = 1e-9
-    item = 10000
+    item = 15000
     m,n = x.shape
     w = np.zeros(n)
     for i in range(item):
