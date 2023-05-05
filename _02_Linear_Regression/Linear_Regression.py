@@ -11,14 +11,14 @@ except ImportError as e:
 def ridge(data):
     x,y = read_data()
     lam = 0.01
-    w = np.dot(np.linalg.inv(np.dot(x.T,x)+lam*np.eye(x.shape(1))),np.dot(x.T,y))
+    w = np.dot(np.linalg.inv(np.dot(x.T,x)+lam*np.eye(x.shape[1])),np.dot(x.T,y))
     return sum(data*w)
     
 def lasso(data):
     x,y = read_data()
     alpha = 1e-10
     step = 1e-9
-    item = 1000
+    item = 10000
     m,n = x.shape
     w = np.zeros(n)
     for i in range(item):
